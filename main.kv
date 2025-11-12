@@ -1,108 +1,66 @@
 <MainScreen>:
-    #: import time __main__.time
+    BoxLayout:
+        orientation: 'vertical'
+        padding: dp(20)
+        spacing: dp(20)
 
-    name: 'main'
-    FloatLayout:
-        size_hint: None, None
+        GridLayout:
+            cols: 3
+            rows: 3
+            spacing: dp(6)
+            padding: dp(6)
+            size_hint: 1, 1
 
-    # button to change to stepper screen
-    DPEAButton:
-        id: test_button
-        text: 'Test Stepper'
-        size: 100, 100
-        x: root.width * 0.5
-        y: root.height * 0.15
-        color: 0, 1, 0, 1
-        on_press: app.root.current = "StepperStartup"
+            DPEAButton:
+                text: 'Digital Input'
+                size_hint: 1, 1
+                font_size: '18sp'
+                on_press: root.open_screen(0)
 
-    # button to change to servo screen
-    DPEAButton:
-        text: "Test Servo"
-        size: 100, 100
-        x: root.width * 0.5
-        y: root.height * 0.25
-        color: 1, 0, 0, 1
-        on_press: app.root.current = "servo"
+            DPEAButton:
+                text: 'Screen 1'
+                size_hint: 1, 1
+                font_size: '18sp'
+                on_press: root.open_screen(1)
 
-    # button to change to button screen
-    DPEAButton:
-        text: "Test Button"
-        size: 100, 100
-        x: root.width * 0.5
-        y: root.height * 0.35
-        color: 1, 0, 0, 1
-        on_press: app.root.current = "button"
+            DPEAButton:
+                text: 'Screen 2'
+                size_hint: 1, 1
+                font_size: '18sp'
+                on_press: root.open_screen(2)
 
-    # button to change to DC screen
-    DPEAButton:
-        id: test_button
-        text: 'Test DC Motor'
-        size: 100, 100
-        x: root.width * 0.5
-        y: root.height * 0.45
-        color: 0, 1, 0, 1
-        on_press: app.root.current = "DC"
+            DPEAButton:
+                text: 'Screen 3'
+                size_hint: 1, 1
+                font_size: '18sp'
+                on_press: root.open_screen(3)
 
-    # button to change to input screen
-    DPEAButton:
-        id: test_button
-        text: 'Test Input'
-        size: 100, 100
-        x: root.width * 0.5
-        y: root.height * 0.55
-        color: 0, 1, 0, 1
-        on_press: app.root.current = "input"
+            DPEAButton:
+                text: 'Screen 4'
+                size_hint: 1, 1
+                font_size: '18sp'
+                on_press: root.open_screen(4)
 
-    # button to change to output screen
-    DPEAButton:
-        id: test_button
-        text: 'Test Output'
-        size: 100, 100
-        x: root.width * 0.5
-        y: root.height * 0.65
-        color: 0, 1, 0, 1
-        on_press: app.root.current = "output"
+            DPEAButton:
+                text: 'Screen 5'
+                size_hint: 1, 1
+                font_size: '18sp'
+                on_press: root.open_screen(5)
 
-    # button to change to neopixel screen
-    DPEAButton:
-        id: test_button
-        text: 'Test Neopixel'
-        size: 100, 100
-        x: root.width * 0.5
-        y: root.height * 0.75
-        color: 0, 1, 0, 1
-        on_press: app.root.current = "Neopixel"
+            DPEAButton:
+                text: 'Screen 6'
+                size_hint: 1, 1
+                font_size: '18sp'
+                on_press: root.open_screen(6)
 
-    # button to change to encoder screen
-    DPEAButton:
-        id: test_button
-        text: 'Test Encoder'
-        size: 100, 100
-        x: root.width * 0.5
-        y: root.height * 0.85
-        color: 0, 1, 0, 1
-        on_press: app.root.current = "Encoder"
+            DPEAButton:
+                text: 'Screen 7'
+                size_hint: 1, 1
+                font_size: '18sp'
+                on_press: root.open_screen(7)
 
-    # button to change to potentiometer screen
-    DPEAButton:
-        id: test_button
-        text: 'Test Potentiometer'
-        size: 100, 100
-        x: root.width * 0.65
-        y: root.height * 0.85
-        color: 0, 1, 0, 1
-        on_press: app.root.current = "Potentiometer"
-
-    DPEAButton:
-        # Quit button
-        size: 100, 100
-        center_x: root.width * 0.95
-        center_y: root.height * 0.95
-
-        background_color: 0,0,0,0
-        color: 0.035, 0.152, 0.725, 1
-
-        text: "Quit"
-        on_press: root.exit_program()
-
-
+            DPEAButton:
+                text: 'Screen 8'
+                size_hint: 1, 1
+                font_size: '18sp'
+                on_press: root.open_screen(8)
